@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is for converting ts files to mkv using the h265 video and the ac3 audio-codec.
 for i in *.ts
 do
 	ASPECT=`mediainfo "$i" | grep Display | cut -d" " -f25`

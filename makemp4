@@ -1,3 +1,7 @@
 #!/bin/bash
+# This is a little wrapper style script for ffmpeg.
+# It was written for the one and only purpose to convert video-ts files
+# recorded by Kathrein UFS-922 to an mp4 container, keeping the original audio codec
+# and reencoding the video to H264 (libx264).
 FILE=$1
 ffmpeg -i "$FILE" -c:v libx264 -crf 18 -c:a copy "${FILE.*}.mp4"
